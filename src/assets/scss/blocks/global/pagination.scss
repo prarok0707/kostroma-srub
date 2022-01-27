@@ -1,0 +1,98 @@
+.pagination__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination__arrow {
+  padding: 0.3em;
+
+  font-size: 1.25rem;
+  color: $primary;
+
+  transition: transform 0.1s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  @include breakpointMin($sm) {
+    padding: 0;
+  }
+}
+
+.pagination__pver {
+  margin: 0 1.7em 0 0;
+
+  transform: rotate(180deg);
+
+  @include breakpointMin($md) {
+    margin: 0 2.5em 0 0;
+  }
+}
+.pagination__next {
+  margin: 0 0 0 1.7em;
+
+  @include breakpointMin($md) {
+    margin: 0 0 0 2.5em;
+  }
+}
+
+.pagination__list {
+  margin: 0 -1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include breakpointMin($md) {
+    margin: 0 -1.25rem;
+  }
+}
+
+.pagination__item {
+  padding: 0 1rem;
+
+  @include breakpointMin($md) {
+    padding: 0 1.25rem;
+  }
+}
+
+.pagination__link {
+  padding: .3em;
+
+  display: inline-block;
+
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: $primary;
+
+  transition: transform 0.1s linear;
+
+  &_current {
+    font-size: 1.5em;
+    color: $orange;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  @include breakpointMin($sm) {
+    padding: 0;
+
+    &_current {
+      padding: 0 0 0.3em 0;
+  
+      font-size: 1.5em;
+      color: $orange;
+  
+      border-bottom: 0.1em solid $orange;
+    }
+  }
+}

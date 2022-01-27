@@ -1,0 +1,69 @@
+.contacts-tel {
+  margin: 0em -0.675em -0.9375rem;
+
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: $secondary;
+
+  @include breakpointMin($md) {
+    font-size: 1rem;
+  }
+
+  @include breakpointMin($md) {
+    font-size: 1.25rem;
+  }
+}
+
+.contacts-tel__col {
+  margin: 0 0 0.9375rem 0;
+  padding: 0em 0.675em;
+}
+
+.contacts-tel__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: inherit;
+
+  &::before {
+    margin: 0 0.5em 0 0;
+
+    font-size: 1em;
+    color: $orange;
+  }
+}
+
+.contacts-tel__city {
+  align-self: flex-end;
+  margin: 0 0 0 .6em;
+
+  font-size: 0.7em;
+  color: #a1a1a1;
+}
+
+.contacts-tel__mail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.8em;
+  color: $blue;
+
+  &::before {
+    margin: 0 0.6875em 0 0.132em;
+
+    font-size: 1.25em;
+  }
+}
+
+.contacts-tel__instagram-image {
+  width: 7.1875rem;
+  height: 1.625rem;
+
+  position: relative;
+}

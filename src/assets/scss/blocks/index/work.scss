@@ -1,0 +1,234 @@
+.work {
+  position: relative;
+}
+
+.work__bg {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.work__header {
+  padding: 1.5rem 0 1rem 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @include breakpointMin($sm) {
+    padding: 2rem 0 1.3rem 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include breakpointMin($md) {
+    padding: 3.125rem 0 1.875rem 0;
+  }
+}
+
+.work__title {
+  margin: 0 0 0.8rem 0;
+
+  @include breakpointMin($sm) {
+    margin: 0;
+  }
+}
+
+.work__title-link {
+  flex: 0 0 auto;
+  width: 16.71428em;
+  height: 3.571428em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: $primary;
+
+  border: 0.071428571em solid $orange;
+  border-radius: 1.785714em;
+
+  &::before {
+    order: 1;
+    margin: 0 0 0 0.75em;
+
+    font-size: 1.42857em;
+
+    transition: transform 0.2s linear;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::before {
+        transform: translate(0.2em, 0);
+      }
+    }
+  }
+
+  @include breakpointMin($md) {
+    font-size: 0.875rem;
+  }
+}
+
+.work__body {
+  padding: 0 0 1.5rem 0;
+
+  @include breakpointMin($sm) {
+    padding: 0 0 2rem 0;
+  }
+
+  @include breakpointMin($md) {
+    padding: 0 0 3.125rem 0;
+  }
+}
+
+// cards-work
+.cards-work {
+  margin: 0 -0.3rem -0.6rem;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  @include breakpointMin($sm) {
+    margin: 0 -0.7rem -1.4rem;
+  }
+
+  @include breakpointMin($lg) {
+    margin: 0 -0.7rem 0;
+  }
+
+  @include breakpointMin($xl) {
+    margin: 0 -0.9375rem;
+  }
+}
+
+.cards-work__col {
+  flex: 1 1 50%;
+  padding: 0 0.3rem 0.6rem;
+  min-width: 15.625rem;
+
+  display: flex;
+
+  @include breakpointMin($sm) {
+    flex: 1 1 50%;
+    padding: 0 0.7rem 1.4rem;
+    min-width: auto;
+  }
+
+  @include breakpointMin($lg) {
+    flex: 1 1 25%;
+    padding: 0 0.7rem 0;
+  }
+
+  @include breakpointMin($xl) {
+    padding: 0 0.9375rem;
+  }
+}
+
+.cards-work__card {
+  display: flex;
+}
+
+.cards-work__link {
+  padding: 1.2rem;
+
+  display: block;
+
+  background-color: $white;
+
+  box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.07);
+
+  @media (any-hover: hover) {
+    &:hover {
+      & .cards-work__image img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  @include breakpointMin($md) {
+    padding: 1.875rem;
+  }
+
+  @include breakpointMin($lg) {
+    padding: 1.3rem;
+  }
+
+  @include breakpointMin($xl) {
+    padding: 1.875rem;
+  }
+}
+
+.cards-work__image {
+  margin: 0 0 0.5rem 0;
+  height: 10rem;
+
+  overflow: hidden;
+
+  & img {
+    transition: transform 0.2s linear;
+  }
+
+  &::before {
+    width: 1.5926em;
+    height: 1.5926em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.45rem;
+    color: $white;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    background-color: $orange;
+  }
+
+  @include breakpointMin($sm) {
+    margin: 0 0 0.875rem 0;
+    height: 12.625rem;
+
+    &::before {
+      font-size: 1.6875rem;
+    }
+  }
+}
+
+.cards-work__title {
+  margin: 0 0 0.55em 0;
+
+  font-size: 1rem;
+  font-weight: 400;
+  color: $primary;
+
+  @include breakpointMin($sm) {
+    font-size: 1.25rem;
+  }
+}
+
+.cards-work__text {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: $primary;
+
+  @include breakpointMin($sm) {
+    font-size: 0.875rem;
+  }
+}

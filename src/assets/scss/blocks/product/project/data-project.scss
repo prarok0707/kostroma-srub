@@ -1,0 +1,55 @@
+.data-project {
+  padding: 1rem 1.25rem;
+  height: 100%;
+
+  text-align: center;
+
+  background: url("../images/project/dataimg.jpg") 0 0 / cover no-repeat;
+
+  @include breakpointMin($md) {
+    padding: 1.875rem 1.25rem;
+
+    text-align: left;
+  }
+}
+
+.data-project__title {
+  margin: 0 0 1em 0;
+
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: $primary;
+
+  span {
+    margin: 0.3125em 0 0 0;
+
+    display: block;
+
+    font-size: 0.8em;
+    font-weight: 700;
+    color: $orange;
+  }
+}
+
+.data-project__item {
+  &:not(:last-child) {
+    margin: 0 0 1.25rem 0;
+  }
+}
+
+.data-project__name {
+  display: block;
+
+  font-size: 0.875rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: $primary;
+}
+
+.data-project__info {
+  display: block;
+
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #635454;
+}

@@ -1,0 +1,156 @@
+.benefits__body {
+  padding: 1.5rem 0;
+
+  background-color: $white;
+
+  @include breakpointMin($sm) {
+    padding: 2rem 0;
+  }
+
+  @include breakpointMin($md) {
+    padding: 3.125rem 0;
+  }
+}
+
+.benefits__title {
+  margin: 0 0 1.7rem 0;
+
+  @include breakpointMin($sm) {
+    margin: 0 0 2rem 0;
+  }
+
+  @include breakpointMin($md) {
+    margin: 0 0 3.25rem 0;
+  }
+}
+
+.benefits__row {
+  display: flex;
+}
+
+.benefits__image {
+  flex: 1 1 50%;
+}
+
+.benefits__image {
+  display: none;
+
+  @include breakpointMin($md) {
+    height: 38.875rem;
+
+    display: block;
+  
+    border: 2.375rem solid $orange;
+  
+    &::after {
+      content: "";
+  
+      width: 10rem;
+      height: 10rem;
+  
+      display: block;
+  
+      position: absolute;
+      bottom: -2.375rem;
+      left: -2.375rem;
+  
+      background-image: url("../images/logo/logo02.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: $primary;
+    }
+  }
+}
+
+// list-benefits
+.list-benefits {
+  flex: 1 1 50%;
+
+  margin: 0 0 -1rem 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  counter-reset: benefits-items;
+
+  @include breakpointMin($md) {
+    margin: 0;
+    padding: 0 0.8rem 0 0;
+  }
+}
+
+.list-benefits__item {
+  padding: 0 0 1rem 0;
+
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "0" counter(benefits-items);
+    counter-increment: benefits-items;
+    flex: 0 0 auto;
+    margin: 0 0.54em 0 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.04em;
+    height: 2.04em;
+
+    font-size: 1.8rem;
+    font-weight: 200;
+    color: $orange;
+
+    border-radius: 50%;
+
+    background-color: #f8f8f8;
+  }
+
+  @include breakpointMin($sm) {
+    padding: 0 0 1rem 0;
+
+    &::before {
+      font-size: 2rem;
+    }
+  }
+
+  @include breakpointMin($md) {
+    padding: 0;
+
+    &::before {
+      font-size: 3.125rem;
+    }
+  }
+}
+
+.list-benefits__info {
+  flex: 1 1 auto;
+
+  @include breakpointMin($md) {
+  flex: 0 1 25rem;
+  }
+}
+
+.list-benefits__title {
+  margin: 0 0 0.5em 0;
+
+  font-size: 1rem;
+  font-weight: 500;
+  color: $primary;
+
+  @include breakpointMin($md) {
+    font-size: 1.25rem;
+  }
+}
+
+.list-benefits__text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #707070;
+
+  @include breakpointMin($md) {
+    font-size: 0.875rem;
+  }
+}

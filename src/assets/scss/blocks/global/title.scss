@@ -1,0 +1,43 @@
+.title__text,
+.title__subtext {
+  display: block;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: $primary;
+
+  @include breakpointMin($sm) {
+    text-align: left;
+  }
+
+  .title_secondary & {
+    color: $secondary;
+  }
+}
+
+.title__text {
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 300;
+
+  @include breakpointMin($sm) {
+    font-size: 2.625rem;
+    line-height: 0.7;
+  }
+  @include breakpointMin($md) {
+    font-size: 3.625rem;
+  }
+}
+
+.title__subtext {
+  font-size: 1.1rem;
+  text-transform: lowercase;
+  font-weight: 500;
+
+  @include breakpointMin($sm) {
+    font-size: 1.625rem;
+  }
+  @include breakpointMin($md) {
+    font-size: 2.375rem;
+  }
+}

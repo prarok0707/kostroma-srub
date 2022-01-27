@@ -1,0 +1,178 @@
+.crumbs {
+  position: relative;
+}
+
+.crumbs__bg {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.crumbs__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  position: relative;
+
+  @include breakpointMin($md) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.crumbs__list {
+  padding: 0.65rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include breakpointMin($sm) {
+    padding: 0.85rem 0;
+  }
+
+  @include breakpointMin($md) {
+    padding: 1.25rem 0;
+
+    justify-content: flex-start;
+  }
+}
+
+.crumbs__item {
+  flex: 0 0 auto;
+
+  &:not(:last-child) {
+    &::after {
+      content: "/";
+
+      padding: 0 0.714285em;
+
+      font-size: 0.775rem;
+      font-weight: 700;
+      color: $primary;
+    }
+  }
+
+  &:last-child {
+    .crumbs__link {
+      font-weight: 400;
+
+      pointer-events: none;
+    }
+  }
+
+  @include breakpointMin($md) {
+    &:not(:last-child) {
+      &::after {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+.crumbs__link {
+  font-size: 0.775rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $primary;
+
+  transition: color 0.1s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  @include breakpointMin($md) {
+    font-size: 0.875rem;
+  }
+}
+
+.crumbs__btns {
+  flex: 0 0 auto;
+  margin: 0 -0.9375rem;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  &::after {
+    content: "";
+
+    width: 1px;
+    height: 1.25rem;
+
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 2px);
+
+    transform: translate(50%, -50%);
+
+    background-color: #d2d2d2;
+  }
+
+  @include breakpointMin($md) {
+    padding: 0 0 0 1rem;
+
+    &::after {
+      left: calc(50% + 0.5rem + 2px);
+    }
+  }
+}
+
+.crumbs__btn {
+  padding: 0.65rem 0.9375rem 0.65rem 0.9375rem;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 0.675rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: $primary;
+
+  transition: 0.1s linear;
+
+  &::before {
+    padding: 0 0 0 1em;
+
+    font-size: 1.42857em;
+
+    transform: rotate(180deg);
+  }
+
+  &_next {
+    &::before {
+      order: 1;
+
+      transform: rotate(0);
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  @include breakpointMin($sm) {
+    padding: 0.85rem 0.9375rem 0.85rem 0.9375rem;
+  }
+
+  @include breakpointMin($md) {
+    padding: 1.25rem 0.9375rem 1.25rem 0.9375rem;
+    font-size: 0.875rem;
+  }
+}

@@ -1,0 +1,146 @@
+.content-technologies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  grid-auto-rows: 15.5rem;
+  gap: 1rem;
+
+  @include breakpointMin($md) {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, 17.1875rem);
+    gap: 1.875rem;
+  }
+}
+
+.content-technologies__item {
+  position: relative;
+
+  border-radius: 0.9375rem;
+
+  overflow: hidden;
+
+  @media (any-hover: hover) {
+    &:hover {
+      .content-technologies__overlay {
+        width: 110%;
+        height: 100%;
+        
+        border-radius: 0 0 0 0;
+      }
+
+      .content-technologies__titel {
+        margin: 0 0 .6em 0;
+      }
+
+      .content-technologies__text {
+        position: static;
+      
+        visibility: visible;
+        pointer-events: auto;
+        opacity: 1;
+
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  @include breakpointMin($sm) {
+    @media (any-hover: hover) {
+      &:hover {
+        .content-technologies__titel {
+          margin: 0 0 1.25em 0;
+        }
+      }
+    }
+  }
+
+  @include breakpointMin($md) {
+    &_middle {
+      grid-column: 2 / 2;
+      grid-row: 1 / 3;
+    }
+  }
+}
+
+.content-technologies__link {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+}
+
+.content-technologies__image {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.content-technologies__overlay {
+  padding: .5rem;
+
+  width: 84.5758%;
+  height: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  transform: translate(-50%, 0);
+
+  border-radius: 0.9375rem 0.9375rem 0 0;
+
+  background-color: rgba($color: #000000, $alpha: .5);
+
+  transition: all .2s linear;
+  
+  @include breakpointMin($md) {
+    height: 3.75rem;
+  }
+}
+
+.content-technologies__titel {
+  display: block;
+
+  font-size: .8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $secondary;
+
+  transition: all .2s linear;
+  
+  @include breakpointMin($md) {
+    font-size: 1rem;
+  }
+}
+
+.content-technologies__text {
+  max-width: 19.78571em;
+
+  display: block;
+
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: $secondary;
+
+  position: absolute;
+  top: 100%;
+  left: 50%;
+
+  transform: translate(-50%, 0);
+
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+
+  transition: opacity .5s linear, visibility .5s linear;
+}

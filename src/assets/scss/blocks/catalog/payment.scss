@@ -1,0 +1,19 @@
+.payment__body {
+  padding: 1.2rem 0 0 0;
+
+  @include breakpointMin($sm) {
+    padding: 1.6875rem 0 0 0;
+  }
+}
+
+.payment__cards {
+  margin: 0 0 .9rem 0;
+
+  @include breakpointMin($md) {
+    margin: 0 0 1rem 0;
+  }
+
+  @include breakpointMin($lg) {
+    margin: 0 0 1.375rem 0;
+  }
+}

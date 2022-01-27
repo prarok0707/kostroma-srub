@@ -1,0 +1,82 @@
+.submenu {
+  display: none;
+  width: 100%;
+  
+  font-size: 1rem;
+  color: $primary;
+
+  transition: height .2s linear;
+
+  &.submenu-show {
+    display: block;
+
+    overflow: hidden;
+  }
+
+  @include breakpointMin($xl) {
+    padding: 2.1875em 1.875em 1.25em;
+    width: 19.5625em;
+  
+    display: block;
+    background-color: #F8F8F8;
+  
+    position: absolute;
+    left: -1.875em;
+    bottom: 0;
+    z-index: $zIndexSubmenu;
+  
+    transform: translateY(110%);
+  
+    overflow: auto;
+  
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+  
+    transition: visibility .2s linear, opacity .2s linear, transform .2s linear;
+  }
+}
+
+.submenu__item {
+  &:not(:last-child) {
+    border-bottom: 1px solid #E3E3E3;
+  }
+}
+
+.submenu__link {
+  padding: 1.25em 0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-transform: uppercase;
+  color: inherit;
+
+  transition: color .2s linear;
+
+  &::before {
+    order: 1;
+    padding: .5em 0 0 .0;
+
+    transform: rotate(-90deg);
+
+    transition: transform .2s linear;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  @include breakpointMin($xl) {
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          transform: rotate(-90deg) translateY(-0.5em);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,244 @@
+.stages__body {
+  padding: 1.7rem 0 2.2rem 0;
+
+  background-color: $white;
+
+  @include breakpointMin($sm) {
+    padding: 2rem 0 3rem 0;
+  }
+
+  @include breakpointMin($md) {
+    padding: 3.165rem 0 4.0625rem 0;
+  }
+}
+
+.stages__title {
+  margin: 0 0 1rem 0;
+
+  @include breakpointMin($sm) {
+    margin: 0 0 1.2rem 0;
+  }
+
+  @include breakpointMin($md) {
+    margin: 0 0 1.875rem 0;
+  }
+}
+
+// list-stages
+.list-stages {
+  margin: 0 -1.5625rem -1rem;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  counter-reset: stages;
+
+  @include breakpointMin($sm) {
+    margin: 0 -1.5625rem -0.5rem;
+  }
+
+  @include breakpointMin($md) {
+    margin: 0 -1.5625rem -1.875rem;
+  
+    flex-direction: row;
+  }
+}
+
+.list-stages__item {
+  flex: 1 1 50%;
+  padding: 0 1.5625rem .5rem;
+
+  &:nth-child(2) {
+    & .list-stages__link {
+      &::before {
+        background-color: #db812d;
+      }
+    }
+  }
+  &:nth-child(3) {
+    & .list-stages__link {
+      &::before {
+        background-color: #e6c276;
+      }
+    }
+  }
+  &:nth-child(4) {
+    & .list-stages__link {
+      &::before {
+        background-color: #a7b656;
+      }
+    }
+  }
+  &:nth-child(5) {
+    & .list-stages__link {
+      &::before {
+        background-color: #6cbac4;
+      }
+    }
+  }
+  &:nth-child(6) {
+    & .list-stages__link {
+      &::before {
+        background-color: #8397dc;
+      }
+    }
+  }
+
+  @include breakpointMin($sm) {
+    padding: 0 1.5625rem 1rem;
+  }
+  
+  @include breakpointMin($md) {
+    flex: 1 1 33.3333%;
+    padding: 0 1.5625rem 1.875rem;
+  }
+}
+
+.list-stages__link {
+  padding: 0.625rem 0 0 0;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  &::before {
+    content: "0" counter(stages);
+    counter-increment: stages;
+
+    flex: 0 0 auto;
+    align-self: flex-start;
+
+    width: 2.6em;
+    height: 2.6em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1rem;
+    font-weight: 500;
+    color: $white;
+
+    border-radius: 50%;
+
+    background-color: #966241;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      .list-stages__title::before {
+        transform: translateX(-10px);
+      }
+    }
+  }
+  
+  @include breakpointMin($md) {
+
+    &::before {
+      width: 2.6em;
+      height: 2.6em;
+  
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: $white;
+  
+      position: absolute;
+      top: 0;
+      left: 3.425em;
+      z-index: 1;
+    }
+  }
+}
+
+.list-stages__icon {
+  flex: 0 0 auto;
+  margin: 0 1rem 0 0;
+  
+  width: 5rem;
+  height: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: #f8f8f8;
+
+  & img {
+    flex: 0 0 auto;
+  }
+  
+  @include breakpointMin($sm) {
+    width: 6.125rem;
+    height: 6.125rem;
+  }
+  
+  @include breakpointMin($md) {
+    margin: 0 1.5625rem 0 0;
+  
+    width: 6.125rem;
+    height: 6.125rem;
+  }
+}
+
+.list-stages__content {
+  flex: 0 1 auto;
+  margin: 0 auto;
+
+  display: block;
+
+  position: relative;
+  z-index: 2;
+  
+  @include breakpointMin($sm) {
+    margin: 0 auto;
+  }
+
+  @include breakpointMin($md) {
+    flex: 1 1 auto;
+    margin: 0;
+  }
+}
+
+.list-stages__title {
+  margin: 0 0 0.5em 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 1rem;
+  font-weight: 500;
+  color: $primary;
+
+  &::before {
+    order: 1;
+
+    font-size: 1.1em;
+    color: $orange;
+
+    transition: transform .2s linear;
+  }
+  
+  @include breakpointMin($sm) {
+    font-size: 1.125rem;
+  }
+}
+
+.list-stage__text {
+  display: block;
+
+  font-size: 0.675rem;
+  font-weight: 500;
+  color: #707070;
+  
+  @include breakpointMin($sm) {
+    min-width: 13.57142em;
+    max-width: 16.714285em;
+
+    font-size: 0.875rem;
+  }
+}

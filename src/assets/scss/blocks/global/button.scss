@@ -1,0 +1,79 @@
+.button {
+  width: 100%;
+  min-height: 3.571428em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.688rem;
+  font-weight: 400;
+  color: $white;
+
+  border: 0.0714285em solid $orange;
+  border-radius: 1.785714em;
+
+  background-color: $orange;
+
+  transition: color 0.2s linear, background 0.2s linear;
+
+  &::before {
+    order: 1;
+    margin: 0 0 0 0.75em;
+
+    font-size: 1.42857em;
+
+    transition: transform 0.2s linear;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $orange;
+
+      background-color: $white;
+
+      &::before {
+        transform: translate(5px, 0);
+      }
+    }
+  }
+
+  &_transparent {
+    color: $primary;
+
+    background-color: transparent;
+
+    &::before {
+      order: 0;
+      margin: 0 0.75em 0 0;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  &_green {
+    border: 0.0714285em solid $green;
+
+    background-color: $green;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+
+  @include breakpointMin($sm) {
+    font-size: 0.75rem;
+  }
+
+  @include breakpointMin($md) {
+    font-size: 0.875rem;
+  }
+}

@@ -1,0 +1,55 @@
+.logo {
+  display: inline-block;
+
+  font-size: 1rem;
+  line-height: 1.2;
+  color: $secondary;
+
+  &_footer {
+    .logo__img {
+      margin-right: 0;
+      max-width: 4rem;
+    }
+  }
+
+  @include breakpointMin($md) {
+    &_footer {
+      .logo__img {
+        max-width: 6rem;
+      }
+    }
+  }
+
+  @include breakpointMin($lg) {
+    &_footer {
+      .logo__img {
+        max-width: 8.3125rem;
+      }
+    }
+  }
+}
+
+.logo__link {
+  display: flex;
+  align-items: center;
+
+  color: inherit;
+
+  position: relative;
+}
+
+.logo__img {
+  margin-right: 1.875em;
+
+  max-width: 6.1875em;
+
+  display: inline-block;
+}
+
+.logo__text {
+  text-transform: uppercase;
+
+  & span {
+    font-weight: 700;
+  }
+}

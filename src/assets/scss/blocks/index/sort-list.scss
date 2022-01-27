@@ -1,0 +1,65 @@
+.sort-list__items {
+  margin: 0 -0.3125rem;
+
+  display: flex;
+  align-items: center;
+
+  overflow: auto;
+
+  @include breakpointMin($sm) {
+    flex-wrap: wrap;
+
+    overflow: visible;
+  }
+}
+
+.sort-list__item {
+  flex: 0 0 auto;
+
+  padding: 0 0.3125rem 0.3125rem;
+
+  @include breakpointMin($sm) {
+    padding: 0 0.3125rem 0.3125rem;
+  }
+}
+
+.sort-list__link {
+  padding: 1.75em 3em;
+
+  display: inline-block;
+
+  font-size: .5rem;
+  font-weight: 400;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: $primary;
+
+  border: 1px solid $grey;
+
+  background-color: $white;
+
+  transition: background .2s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: lighten($color: #E6C276, $amount: 10);
+    }
+  }
+
+  .sort-list__item_active &{
+    background-color: #E6C276;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #E6C276;
+      }
+    }
+  }
+
+  @include breakpointMin($sm) {
+    font-size: .7rem;
+  }
+  @include breakpointMin($md) {
+    font-size: 1rem;
+  }
+}

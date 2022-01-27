@@ -1,0 +1,27 @@
+.socials {
+  font-size: 1.375rem;
+  color: $white;
+}
+
+.socials__list {
+  margin: 0em -0.5em;
+
+  display: flex;
+  align-items: center;
+}
+
+.socials__item {
+  padding: 0em 0.5em;
+}
+
+.socials__link {
+  color: inherit;
+
+  transition: color .2s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $orange;
+    }
+  }
+}

@@ -1,0 +1,244 @@
+.header {
+  color: $secondary;
+  position: relative;
+  z-index: 9;
+  background: url("../images/main-bg.png") center 0 no-repeat;
+}
+
+.header__bg {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  overflow: hidden;
+
+  & img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    position: absolute;
+    top: -85px;
+    left: 0;
+    z-index: -1;
+
+    object-fit: cover;
+  }
+}
+
+.header__body {
+  padding: 1.5625rem 0;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+.header__logo {
+  flex: 1 0 100%;
+
+  font-size: .7rem;
+
+  .logo__img  {
+    margin-right: 1em;
+  }
+
+  @include breakpointMin($md) {
+    flex: 0 1 auto;
+
+    font-size: 1rem;
+
+    .logo__img {
+      margin-right: 1.875em;
+    }
+  }
+}
+
+.header__socials {
+  margin-right: auto;
+
+  @include breakpointMin($md) {
+    margin: 0 auto;
+    padding: 0px 10px;
+  }
+}
+
+.header__menu-burger {
+  & button {
+    padding: 0.6em;
+
+    width: 4em;
+    height: 4em;
+
+    display: block;
+
+    font-size: 10px;
+
+    border-radius: 0.5em;
+
+    background-color: rgba($color: $white, $alpha: 0.77);
+
+    position: relative;
+
+    overflow: hidden;
+
+    &::before,
+    & span,
+    &::after {
+      width: 100%;
+      height: 0.2em;
+
+      display: block;
+
+      background-color: $orange;
+
+      transition: all 0.2s linear;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+
+      width: calc(100% - 1.2em);
+
+      position: absolute;
+      left: 0.6em;
+    }
+
+    &::before {
+      top: 0.8em;
+    }
+    &::after {
+      bottom: 0.8em;
+    }
+  }
+
+  @include breakpointMin($xl) {
+    display: none;
+  }
+}
+
+.header__contacts-show-btn {
+  flex: 1 0 100%;
+  margin: .6em 0 0 0;
+
+  font-size: 1rem;
+  cursor: pointer;
+
+  & span {
+    padding: 0.5em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba($color: $white, $alpha: .3);
+
+    &::before {
+      order: 1;
+      margin: 0.45em 0em 0em 0.5em;
+      font-size: .8em;
+    }
+  }
+
+  @include breakpointMin($md) {
+    display: none;
+  }
+}
+
+.header__contacts {
+  display: none;
+  flex-direction: column;
+
+  transition: height .2s linear;
+
+  &.header-contacts-show {
+    display: flex;
+
+    overflow: hidden;
+  }
+
+  .contacts-tel {
+    margin: .5rem 0;
+
+    font-size: 1rem;
+    text-align: center;
+
+    .contacts-tel__col {
+      flex: 1 1 100%;
+      margin-bottom: 0.2em;
+    }
+  }
+
+  .contacts-btn {
+    .contacts-btn__list {
+      justify-content: center;
+    }
+  
+    .contacts-btn__item {
+      &:not(:last-child) {
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  @include breakpointMin($sm) {
+    margin-top: 1em;
+    flex-direction: row;
+    align-items: center;
+
+    .contacts-tel {
+      margin: 0 .5rem 0 -0.675em;
+
+      font-size: 1.15rem;
+      text-align: left;
+
+      .contacts-tel__col {
+        flex: 1 1 auto;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include breakpointMin($md) {
+    margin-top: 0;
+    display: block;
+
+    .contacts-tel {
+      margin: 0 0 1.25rem -0.675em;
+
+      font-size: 1.25rem;
+    }
+
+    .contacts-btn {
+      .contacts-btn__list {
+        justify-content: flex-start;
+      }
+
+      .contacts-btn__item {
+        padding: 0em 1.25em;
+  
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.header__line {
+  display: none;
+  @include breakpointMin($xl) {
+    width: 100%;
+    height: 1px;
+
+    display: block;
+  
+    background-color: #534d49;
+  }
+}

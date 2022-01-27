@@ -1,0 +1,192 @@
+.hits-cards {
+  margin: 0 -0.5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  @include breakpointMin($lg) {
+    margin: 0 -0.9375rem;
+  }
+}
+
+.hits-cards__col {
+  flex: 1 1 100%;
+
+  padding: 0 0.5rem;
+  display: flex;
+
+  @include breakpointMin($sm) {
+    flex: 0 1 50%;
+  }
+
+  @include breakpointMin($md) {
+    flex: 0 1 33.3333%;
+  }
+
+  @include breakpointMin($lg) {
+    padding: 0 0.9375rem;
+  }
+}
+
+.hits-cards__card {
+  margin: 0 0 1rem 0;
+  padding: 1rem;
+
+  min-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid $grey;
+
+  background-color: $white;
+
+  box-shadow: 0px 7px 12px 0px rgba($color: $black, $alpha: 0.07);
+
+  @include breakpointMin($md) {
+    padding: 1.3rem;
+  }
+
+  @include breakpointMin($lg) {
+    padding: 1.75rem;
+  }
+}
+
+.hits-cards__img {
+  margin: 0 0 1rem 0;
+
+  height: 12rem;
+
+  @include breakpointMin($sm) {
+    margin: 0 0 1.4rem 0;
+  }
+
+  @include breakpointMin($md) {
+    height: 15rem;
+  }
+
+  @include breakpointMin($lg) {
+    margin: 0 0 1.875rem 0;
+
+    height: 16.8125rem;
+  }
+}
+
+.hits-card__title {
+  margin: 0 0 0.75em 0;
+
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.172;
+  text-align: center;
+  color: $primary;
+
+  @include breakpointMin($sm) {
+    text-align: left;
+  }
+
+  @include breakpointMin($lg) {
+    font-size: 1.25rem;
+  }
+}
+
+.hits-card__data {
+  margin: 0 -0.5rem 0.5rem -0.5rem;
+  padding: 0.45rem 1.2rem;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: #f8f8f8;
+
+  @include breakpointMin($lg) {
+    margin: 0 0 0.625rem 0;
+    padding: 0.625rem 1.875rem;
+
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.hits-card__footage {
+  padding: 0 0.5rem;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 0.7rem;
+  line-height: 1.1721;
+  color: #707070;
+
+  &::before {
+    content: "";
+    margin: 0 0.42857em 0 0;
+
+    width: 1.214em;
+    height: 1.214em;
+
+    display: inline-block;
+
+    background: url("../images/hits/footage.svg") 0 0 / cover no-repeat;
+  }
+
+  @include breakpointMin($md) {
+    font-size: 0.875rem;
+  }
+}
+
+.hits-card__price {
+  padding: 0 0.5rem;
+
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.15;
+  color: $black;
+
+  &::before {
+    content: "от";
+    padding: 0 0.3em 0 0;
+
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.1721;
+    color: #707070;
+  }
+
+  @include breakpointMin($md) {
+    font-size: 1.25rem;
+  }
+}
+
+.hits-card__link {
+  margin: auto 0 0 0;
+
+  padding: 0.5em 0;
+
+  width: 100%;
+
+  display: block;
+
+  font-size: 1rem;
+  line-height: 1.1719;
+  font-weight: 400;
+  text-align: center;
+  color: $primary;
+
+  border: 1px solid #e7e7e7;
+
+  background-color: $white;
+
+  transition: all 0.2s linear;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $white;
+
+      background-color: $orange;
+    }
+  }
+}
