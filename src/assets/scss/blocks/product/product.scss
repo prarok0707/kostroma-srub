@@ -1,0 +1,11 @@
+.product__sort-list {
+  padding: 1rem 0;
+
+  @include breakpointMin($sm) {
+    padding: 1.2rem 0;
+  }
+
+  @include breakpointMin($md) {
+    padding: 1.875rem 0;
+  }
+}

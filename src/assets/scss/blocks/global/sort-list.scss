@@ -1,5 +1,5 @@
 .sort-list__items {
-  margin: 0 -0.3125rem;
+  margin: 0 -0.3125rem -0.3125rem;
 
   display: flex;
   align-items: center;
@@ -16,7 +16,7 @@
 .sort-list__item {
   flex: 0 0 auto;
 
-  padding: 0 0.3125rem 0.3125rem;
+  padding: 0 0.3125rem;
 
   @include breakpointMin($sm) {
     padding: 0 0.3125rem 0.3125rem;

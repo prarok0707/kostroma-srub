@@ -14,6 +14,7 @@
 @import "./global/pagination";
 @import "./global/stages";
 @import "./global/embed";
+@import "./global/sort-list";
 
 // Header
 @import "./header/menu";
@@ -23,7 +24,6 @@
 // Index
 @import "./index/main-header";
 @import "./index/hits";
-@import "./index/sort-list";
 @import "./index/calculate-cost";
 @import "./index/technologies";
 @import "./index/content-technologies";
@@ -37,7 +37,7 @@
 
 // Product
 @import "./product/product";
-  // product/project
+// product/project
 @import "./product/project/project";
 @import "./product/project/slider-project";
 @import "./product/project/subslider-project";
