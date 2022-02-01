@@ -1,0 +1,145 @@
+.gallery__crumbs {
+  margin: 0 0 1rem 0;
+
+  @include breakpointMin($md) {
+    margin: 0 0 1.875rem 0;
+  }
+}
+
+.gallery__title {
+  margin: 0 0 1rem 0;
+
+  @include breakpointMin($md) {
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+.gallery__items {
+  margin: 0 -0.625rem;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  @include breakpointMin($md) {
+    margin: 0 -0.9375rem;
+  }
+}
+
+.gallery__item {
+  flex: 0 1 100%;
+  padding: 0 0.625rem 1.25rem 0.625rem;
+
+  @include breakpointMin($sm) {
+    flex: 0 1 50%;
+    padding: 0 0.625rem 1.25rem 0.625rem;
+  }
+
+  @include breakpointMin($md) {
+    flex: 0 1 33.333%;
+    padding: 0 0.9375rem 1.875rem 0.9375rem;
+  }
+}
+
+.gallery__link {
+  display: block;
+
+  position: relative;
+
+  @media (any-hover: hover) {
+    &:hover {
+      .gallery__image img {
+        transform: scale(1.03);
+      }
+
+      .gallery__name {
+        color: $orange;
+      }
+    }
+  }
+}
+
+.gallery__counter {
+  padding: 0.571428em 1em;
+
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: $black;
+
+  position: absolute;
+  top: 1.4286em;
+  left: 1.4286em;
+  z-index: 1;
+
+  background-color: $white;
+
+  @include breakpointMin($md) {
+    font-size: 0.875rem;
+  }
+}
+
+.gallery__image {
+  margin: 0 0 0.8rem 0;
+
+  width: 100%;
+  height: 13rem;
+
+  overflow: hidden;
+
+  img {
+    transition: transform 0.2s linear;
+  }
+
+  @include breakpointMin($sm) {
+    height: 17rem;
+  }
+
+  @include breakpointMin($md) {
+    margin: 0 0 1.25rem 0;
+
+    height: 21.875rem;
+  }
+}
+
+.gallery__date {
+  margin: 0 0 0.7142857em 0;
+
+  display: block;
+
+  font-size: 0.77rem;
+  font-weight: 400;
+  color: $primary;
+
+  @include breakpointMin($md) {
+    font-size: 0.875rem;
+  }
+}
+
+.gallery__name {
+  max-width: 23.2em;
+
+  display: block;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $primary;
+
+  transition: color 0.2s linear;
+
+  @include breakpointMin($md) {
+    font-size: 1rem;
+  }
+}
+
+.gallery__pagination {
+  margin: 0 0 1rem 0;
+
+  @include breakpointMin($md) {
+    margin: 0 0 1.25rem 0;
+  }
+}
+
+
+.gallery__embed {
+  padding-bottom: 0;
+}
