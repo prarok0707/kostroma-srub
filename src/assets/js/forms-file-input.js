@@ -3,7 +3,7 @@
 const formsFileInput = () => {
   const handlerInputFileChange = function (e) {
     const parent = this.parentElement
-    const label = parent.querySelector('.form-modal__label')
+    const label = parent.querySelector('label')
     let nameFile = ''
     
     if (!this.files.length) return

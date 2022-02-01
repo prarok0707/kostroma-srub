@@ -195,6 +195,11 @@ body.no-scroll {
     color: #382d2d;
 }
 
+.title_capitalize > .title__text,
+.title_capitalize > .title__subtext {
+    text-transform: capitalize;
+}
+
 @media (min-width: 576px) {
     .title__text,
 .title__subtext {
@@ -1762,6 +1767,247 @@ body.no-scroll {
     .sort-list__link {
         font-size: 1rem;
     }
+}
+
+.form {
+    padding: 1.3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #FBFBFB;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    display: block;
+}
+
+@media (min-width: 576px) {
+    .form {
+        padding: 1.8rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .form {
+        padding: 2.5rem;
+    }
+}
+
+.form__title {
+    margin: 0 0 0.6em 0;
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #382d2d;
+}
+
+@media (min-width: 768px) {
+    .form__title {
+        font-size: 1.875rem;
+    }
+}
+
+.form__embed {
+    margin: 0 0 1.25em 0;
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #5b5b5b;
+}
+
+@media (min-width: 768px) {
+    .form__embed {
+        font-size: 1rem;
+    }
+}
+
+.form__group {
+    position: relative;
+}
+
+.form__group:not(:last-child) {
+    margin: 0 0 0.8rem 0;
+}
+
+@media (min-width: 768px) {
+    .form__group:not(:last-child) {
+        margin: 0 0 1.25rem 0;
+    }
+}
+
+.form__input {
+    padding: 1.25em;
+    font-size: 0.8rem;
+    color: #7C7C7C;
+    border: 1px solid #d0d0d0;
+}
+
+.form__input:focus + .form__stroce {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .form__input {
+        font-size: 1rem;
+    }
+}
+
+.form__textarea {
+    padding: 1.25em;
+    min-height: 9.375em;
+    font-size: 0.8rem;
+    color: #7C7C7C;
+    border: 1px solid #d0d0d0;
+    resize: vertical;
+}
+
+.form__textarea:focus + .form__stroce {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .form__textarea {
+        font-size: 1rem;
+    }
+}
+
+.form__stroce {
+    width: 0;
+    height: 1px;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #db812d;
+    pointer-events: none;
+    -webkit-transition: width 0.2s ease-in-out;
+    -o-transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out;
+}
+
+.form__row {
+    margin: 0 -0.5rem 0.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .form__row {
+        margin: 0 -0.5rem 1.25rem;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+}
+
+.form__col {
+    padding: 0 0.5rem;
+}
+
+.form__label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #db812d;
+    cursor: pointer;
+}
+
+.form__label::before {
+    padding: 0 0.4761904em 0 0;
+    font-size: 1.3125em;
+}
+
+@media (min-width: 768px) {
+    .form__label {
+        font-size: 1rem;
+    }
+}
+
+.form__input-file {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    z-index: -999;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.form__captcha {
+    display: block;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #382d2d;
+}
+
+@media (min-width: 768px) {
+    .form__captcha {
+        font-size: 2rem;
+    }
+}
+
+.form__rules {
+    margin: 0 0 1.25rem 0;
+    text-align: center;
+}
+
+.form__link {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #5b5b5b;
+    text-decoration: underline;
+}
+
+@media (any-hover: hover) {
+    .form__link:hover {
+        text-decoration: none;
+    }
+}
+
+.form__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .form__buttons {
+        margin: auto 0 0 0;
+    }
+}
+
+.form__button {
+    width: 14.7143em;
 }
 
 .menu {
@@ -4621,6 +4867,208 @@ body.no-scroll {
     font-weight: 400;
     color: #a5a5a5;
     text-decoration: line-through;
+}
+
+.contacts__body {
+    padding: 1.4rem 0 1.4rem 0;
+}
+
+@media (min-width: 768px) {
+    .contacts__body {
+        padding: 1.875rem 0 3.125rem 0;
+    }
+}
+
+.contacts__title {
+    margin: 0 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+    .contacts__title {
+        margin: 0 0 1.5rem 0;
+    }
+}
+
+.contacts__content {
+    margin: 0 -0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 992px) {
+    .contacts__content {
+        margin: 0 -0.9375rem;
+    }
+}
+
+.contacts__left {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    padding: 0 0.5rem 1rem 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 576px) {
+    .contacts__left {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+        flex: 0 1 50%;
+        padding: 0 0.5rem 0 0.5rem;
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {
+    .contacts__left {
+        padding: 0 0.9375rem;
+    }
+}
+
+.contacts__right {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    padding: 0 0.5rem;
+}
+
+@media (min-width: 576px) {
+    .contacts__right {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+        flex: 0 1 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .contacts__right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media (min-width: 992px) {
+    .contacts__right {
+        padding: 0 0.9375rem;
+    }
+}
+
+.contacts__data {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    margin: 0 0 1rem 0;
+    padding: 1.3rem;
+    background-color: #fbfbfb;
+}
+
+.contacts__data > *:not(:last-child) {
+    margin: 0 0 0.4rem 0;
+}
+
+.contacts__data h5 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #382d2d;
+}
+
+.contacts__data a {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #6cbac4;
+}
+
+.contacts__data a span {
+    color: #382d2d;
+}
+
+.contacts__data a.contacts__link_tel {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #db812d;
+}
+
+.contacts__data span {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #382d2d;
+}
+
+.contacts__data p {
+    padding: 0.7142857em 0;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #000000;
+}
+
+@media (min-width: 576px) {
+    .contacts__data {
+        padding: 1.8rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .contacts__data > *:not(:last-child) {
+        margin: 0 0 0.625rem 0;
+    }
+
+    .contacts__data h5 {
+        font-size: 1.25rem;
+    }
+
+    .contacts__data a {
+        font-size: 1rem;
+    }
+
+    .contacts__data a.contacts__link_tel {
+        font-size: 1.25rem;
+    }
+
+    .contacts__data span {
+        font-size: 1rem;
+    }
+
+    .contacts__data p {
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .contacts__data {
+        margin: 0 0 1.875rem 0;
+        padding: 2.5rem;
+    }
+}
+
+.contacts__map {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+}
+
+.contacts__map iframe {
+    width: 100%;
+    height: 19rem;
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .contacts__map iframe {
+        width: 100%;
+        height: 24.3125rem;
+        display: block;
+    }
 }
 
 .footer {

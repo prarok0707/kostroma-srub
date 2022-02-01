@@ -15,6 +15,7 @@
 @import "./global/stages";
 @import "./global/embed";
 @import "./global/sort-list";
+@import "./global/form";
 
 // Header
 @import "./header/menu";
@@ -44,6 +45,9 @@
 @import "./product/project/subslider-project";
 @import "./product/project/data-project";
 @import "./product/project/price-project";
+
+// Contacts
+@import "./contacts/contacts";
 
 // Footer
 @import "./footer/footer";

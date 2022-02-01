@@ -1,0 +1,216 @@
+.form {
+  padding: 1.3rem;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: $formBg;
+
+  input,
+  textarea {
+    width: 100%;
+
+    display: block;
+  }
+
+  @include breakpointMin($sm) {
+    padding: 1.8rem;
+  }
+
+  @include breakpointMin($lg) {
+    padding: 2.5rem;
+  }
+}
+
+.form__title {
+  margin: 0 0 0.6em 0;
+
+  display: block;
+
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: $primary;
+
+  @include breakpointMin($md) {
+    font-size: 1.875rem;
+  }
+}
+
+.form__embed {
+  margin: 0 0 1.25em 0;
+
+  display: block;
+
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #5b5b5b;
+
+  @include breakpointMin($md) {
+    font-size: 1rem;
+  }
+}
+
+.form__group {
+  &:not(:last-child) {
+    margin: 0 0 0.8rem 0;
+  }
+
+  position: relative;
+
+  @include breakpointMin($md) {
+    &:not(:last-child) {
+      margin: 0 0 1.25rem 0;
+    }
+  }
+}
+
+.form__input {
+  padding: 1.25em;
+
+  font-size: 0.8rem;
+  color: $formInputColor;
+
+  border: 1px solid #d0d0d0;
+
+  &:focus + .form__stroce {
+    width: 100%;
+  }
+
+  @include breakpointMin($md) {
+    font-size: 1rem;
+  }
+}
+
+.form__textarea {
+  padding: 1.25em;
+  min-height: 9.375em;
+
+  font-size: 0.8rem;
+  color: $formInputColor;
+
+  border: 1px solid #d0d0d0;
+
+  resize: vertical;
+
+  &:focus + .form__stroce {
+    width: 100%;
+  }
+
+  @include breakpointMin($md) {
+    font-size: 1rem;
+  }
+}
+
+.form__stroce {
+  width: 0;
+  height: 1px;
+
+  display: block;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  background-color: $orange;
+
+  pointer-events: none;
+
+  transition: width 0.2s ease-in-out;
+}
+
+.form__row {
+  margin: 0 -0.5rem 0.8rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include breakpointMin($md) {
+    margin: 0 -0.5rem 1.25rem;
+
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.form__col {
+  padding: 0 0.5rem;
+}
+
+.form__label {
+  display: flex;
+  align-items: center;
+
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: $orange;
+
+  cursor: pointer;
+
+  &::before {
+    padding: 0 0.4761904em 0 0;
+
+    font-size: 1.3125em;
+  }
+
+  @include breakpointMin($md) {
+    font-size: 1rem;
+  }
+}
+
+.form__input-file {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  z-index: -999;
+
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.form__captcha {
+  display: block;
+
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: $primary;
+
+  @include breakpointMin($md) {
+    font-size: 2rem;
+  }
+}
+
+.form__rules {
+  margin: 0 0 1.25rem 0;
+
+  text-align: center;
+}
+
+.form__link {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #5b5b5b;
+
+  text-decoration: underline;
+
+  @media (any-hover: hover) {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.form__buttons {
+  display: flex;
+  justify-content: center;
+
+  @include breakpointMin($md) {
+    margin: auto 0 0 0;
+  }
+}
+
+.form__button {
+  width: 14.7143em;
+}

@@ -6,6 +6,10 @@
   text-transform: uppercase;
   color: $primary;
 
+  .title_capitalize > & {
+    text-transform: capitalize;
+  }
+
   @include breakpointMin($sm) {
     text-align: left;
   }
