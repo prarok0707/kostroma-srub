@@ -1,4 +1,3 @@
-import { test1 } from "./test";
 import showHeaderContacts from "./header-contact";
 import menuSpoilers from "./menu-spoilers";
 import menu from "./menu";
@@ -9,9 +8,9 @@ import filterScrolls from "./filter-scrolls";
 import checkbox from "./checkbox";
 import filterReset from "./filter-reset";
 import slider from "./slider";
+import LoadedPhotos from './loaded-photos'
 
 document.addEventListener("DOMContentLoaded", (e) => {
-  console.log(test1(3));
   showHeaderContacts();
   menu();
   menuSpoilers();
@@ -22,4 +21,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
   checkbox();
   filterReset();
   slider();
+
+  const loaded = new LoadedPhotos('.project-photos__preview')
 });

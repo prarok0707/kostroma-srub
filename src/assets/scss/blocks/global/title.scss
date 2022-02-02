@@ -24,6 +24,20 @@
   line-height: 1;
   font-weight: 300;
 
+  .title_capitalize > & {
+    font-size: 1.8rem;
+    line-height: 1;
+
+    @include breakpointMin($sm) {
+      font-size: 2.2rem;
+    }
+    
+    @include breakpointMin($md) {
+      font-size: 3.125rem;
+      line-height: 1.1;
+    }
+  }
+
   @include breakpointMin($sm) {
     font-size: 2.625rem;
     line-height: 0.7;
