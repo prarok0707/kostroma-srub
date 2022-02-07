@@ -4,6 +4,7 @@ class LoadedPhotos {
   constructor(object) {
     this._selector;
     this._allItems;
+    this._delay;
 
     this._init(object);
   }
@@ -59,7 +60,7 @@ class LoadedPhotos {
     const url = src;
 
     await new Promise((resolve, reject) => {
-      setTimeout(() => resolve(), 2000);
+      setTimeout(() => resolve(), this._delay);
     });
 
     // if (!answer.ok) {
@@ -70,9 +71,10 @@ class LoadedPhotos {
     img.setAttribute("src", url);
   }
 
-  _init({selector}) {
+  _init({selector, delay = 1000}) {
     try {
       this._selector = this._checkString(selector);
+      this._delay = delay;
       this._setAllItems();
     } catch (error) {
       console.log(error);

@@ -7,7 +7,8 @@ import formsFileInput from "./forms-file-input";
 import filterScrolls from "./filter-scrolls";
 import checkbox from "./checkbox";
 import filterReset from "./filter-reset";
-import slider from "./slider";
+import projectSlider from "./project-slider";
+import photoSlider from './photo-slider'
 import LoadedPhotos from './loaded-photos'
 
 document.addEventListener("DOMContentLoaded", (e) => {
@@ -20,7 +21,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
   filterScrolls();
   checkbox();
   filterReset();
-  slider();
+  projectSlider();
+  photoSlider();
 
   const loaded = new LoadedPhotos({
     selector: '.project-photos__preview',
