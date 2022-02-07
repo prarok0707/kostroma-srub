@@ -22,5 +22,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   filterReset();
   slider();
 
-  const loaded = new LoadedPhotos('.project-photos__preview')
+  const loaded = new LoadedPhotos({
+    selector: '.project-photos__preview',
+  })
 });

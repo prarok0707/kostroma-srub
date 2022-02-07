@@ -1,0 +1,184 @@
+.photo-slider {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $zIndexPhotoSlider;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  background-color: rgba($color: #000000, $alpha: 0.8);
+
+  transition: opacity 0.2s linear, visibility 0.2s linear;
+
+  &_show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.photo-slider__body {
+  padding: 0 0 1.5rem 0;
+
+  width: 100vw;
+  height: 60vh;
+
+  position: relative;
+
+  @include breakpointMin($sm) {
+    padding: 0 2.7rem 2.5rem;
+    width: 90vw;
+    height: 90vh;
+  }
+
+  @include breakpointMin($md) {
+    padding: 0 5rem 3rem;
+    width: 61.3vw;
+    height: 81.17vh;
+  }
+}
+
+.photo-slider__button-close {
+  width: 1.875rem;
+  height: 1.875rem;
+
+  cursor: pointer;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+
+  transition: transform 0.2s linear;
+
+  background-color: rgba($color: #000000, $alpha: 0.8);
+
+  span {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+
+      width: 100%;
+      height: 2px;
+
+      display: block;
+
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 0;
+
+      background-color: $white;
+
+      transition: background 0.2s linear;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      span::before,
+      span::after {
+        background-color: $orange;
+      }
+    }
+  }
+
+  @include breakpointMin($sm) {
+    background: transparent;
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.photo-slider__swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.photo-slider__image {
+  width: 100%;
+  height: 100%;
+}
+
+.photo-slider__pagination {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: $white;
+
+  bottom: 0;
+
+  .swiper-pagination-current {
+    font-size: 1.5625em;
+  }
+
+  @include breakpointMin($sm) {
+    font-size: 1rem;
+  }
+}
+
+.photo-slider-button-prev,
+.photo-slider-button-next {
+  &::after {
+    font-size: 2rem;
+    color: $white;
+  
+    transition: color 0.2s linear;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::after {
+        color: $orange;
+      }
+    }
+  }
+
+  @include breakpointMin($sm) {
+    &::after {
+      font-size: 3.375rem;
+      color: $white;
+    
+      transition: color 0.2s linear;
+    }
+  }
+
+  @include breakpointMax($sm) {
+    padding: 0 1.2rem;
+    height: calc(100% - 1.5rem);
+  
+    top: 1.5rem;
+  }
+}
+
+.photo-slider-button-prev {
+  left: 0;
+}
+.photo-slider-button-next {
+  right: 0;
+}

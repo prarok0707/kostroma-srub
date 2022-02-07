@@ -1,17 +1,17 @@
 "use strict";
 
 class LoadedPhotos {
-  constructor(selector) {
+  constructor(object) {
     this._selector;
     this._allItems;
 
-    this._init(selector);
+    this._init(object);
   }
 
   _checkString(str) {
     if (typeof str !== "string") throw new Error(`Not a string ${str}`);
 
-    this._selector = str;
+    return str;
   }
 
   _setAllItems() {
@@ -37,7 +37,7 @@ class LoadedPhotos {
 
     if (!img) result.img = null;
 
-    result.src = img ? img.dataset.photoSrc : null;
+    result.src = img ? img.dataset.photoUrl : null;
 
     return result;
   }
@@ -70,9 +70,9 @@ class LoadedPhotos {
     img.setAttribute("src", url);
   }
 
-  _init(selector) {
+  _init({selector}) {
     try {
-      this._checkString(selector);
+      this._selector = this._checkString(selector);
       this._setAllItems();
     } catch (error) {
       console.log(error);
