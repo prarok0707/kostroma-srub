@@ -1,0 +1,50 @@
+.add-comments {
+  padding: 1rem 1.2rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #F9F9F9;
+
+  @include breakpointMin($md) {
+    padding: 1.25rem 1.875rem;
+
+    flex-wrap: nowrap;
+  }
+}
+
+.add-comments__text {
+  flex: 1 1 auto;
+  padding: 0 0 1em 0;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 0.7rem;
+  line-height: 1.1;
+  font-weight: 500;
+  color: $black;
+
+  &::before {
+    content: "";
+    flex: 0 0 4em;
+    margin: 0 2.142857em 0 0;
+    height: 3.428571em;
+
+    display: block;
+
+    background: url('../images/comments/01.svg') 0 0 / cover no-repeat;
+  }
+
+  @include breakpointMin($md) {
+    padding: 0 3.57142em 0 0;
+
+    font-size: 0.875rem;
+  }
+}
+
+.add-comments__button {
+  flex: 0 0 15.125rem;
+}

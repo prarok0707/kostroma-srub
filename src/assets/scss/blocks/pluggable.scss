@@ -39,12 +39,12 @@
 // Product
 @import "./product/product";
 @import "./product/info-product";
-// product/project
-@import "./product/project/project";
-@import "./product/project/slider-project";
-@import "./product/project/subslider-project";
-@import "./product/project/data-project";
-@import "./product/project/price-project";
+  // product/project
+  @import "./product/project/project";
+  @import "./product/project/slider-project";
+  @import "./product/project/subslider-project";
+  @import "./product/project/data-project";
+  @import "./product/project/price-project";
 
 // Contacts
 @import "./contacts/contacts";
@@ -55,6 +55,11 @@
 // Project photos
 @import "./project-photos/project-photos";
 @import "./project-photos/photo-slider";
+
+// Comments
+@import "./comments/comments";
+@import "./comments/add-comments";
+@import "./comments/comment";
 
 // Footer
 @import "./footer/footer";

@@ -1,0 +1,43 @@
+.comments__crumbs {
+  margin: 0 0 1rem 0;
+
+  @include breakpointMin($sm) {
+    margin: 0 0 1.2rem 0;
+  }
+
+  @include breakpointMin($md) {
+    margin: 0 0 1.875rem 0;
+  }
+}
+
+.comments__title {
+  margin: 0 0 0.8rem 0;
+
+  @include breakpointMin($sm) {
+    margin: 0 0 1.2rem 0;
+  }
+
+  @include breakpointMin($md) {
+    margin: 0 0 1.25rem 0;
+  }
+}
+
+.comments__add {
+  margin: 0 0 1rem 0;
+
+  @include breakpointMin($md) {
+    margin: 0 0 1.875rem 0;
+  }
+}
+
+.comments__body {
+  margin: 0 0 1.5rem 0;
+
+  @include breakpointMin($sm) {
+    margin: 0 0 2.5rem 0;
+  }
+
+  @include breakpointMin($md) {
+    margin: 0 0 3.125rem 0;
+  }
+}

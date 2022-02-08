@@ -1,0 +1,159 @@
+.comment {
+  &:not(:last-child) {
+    margin: 0 0 1rem 0;
+  }
+  padding: 1rem 1rem;
+
+  background-color: #fbfbfb;
+
+  @include breakpointMin($sm) {
+    &:not(:last-child) {
+      margin: 0 0 1.3rem 0;
+    }
+    padding: 1.4rem 1.6rem;
+  }
+
+  @include breakpointMin($md) {
+    &:not(:last-child) {
+      margin: 0 0 1.875rem 0;
+    }
+    padding: 1.875rem 2.5rem;
+  }
+}
+
+.comment__header {
+  margin: 0 0 0.64rem 0;
+  padding: 0.5rem 1rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  background-color: #f3f3f3;
+
+  span {
+    padding: 0.5rem 2.857142em 0.5rem 0;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 1.1;
+    color: $primary;
+
+    &::before {
+      padding: 0 0.5555em 0 0;
+
+      font-size: 1.28571em;
+      color: $orange;
+    }
+  }
+
+  @include breakpointMin($md) {
+    padding: 0.625rem 1.25rem;
+
+    span {
+      padding: 0.625rem 2.857142em 0.625rem 0;
+
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.comment__body {
+  h6 {
+    margin: 0 0 0.625em 0;
+
+    display: block;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: $primary;
+  }
+
+  p {
+    margin: 0 0 1.071428em 0;
+
+    display: block;
+
+    font-size: 0.7rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #4f4f4f;
+  }
+
+  @include breakpointMin($md) {
+    h6 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.comment__previews {
+  display: flex;
+
+  overflow: auto;
+}
+
+.comment__preview {
+  &:not(:last-child) {
+    margin: 0 1.25rem 0 0;
+  }
+  min-width: 7rem;
+  max-width: 7rem;
+  height: 5.0625rem;
+
+  cursor: pointer;
+
+  @include breakpointMin($md) {
+    min-width: 8rem;
+    max-width: 8rem;
+    height: 6.0625rem;
+  }
+}
+
+.comment__embed,
+.fr-video {
+  margin: 0 auto;
+
+  max-width: 47.5rem;
+  height: 13.5rem;
+
+  display: block; //для тега span при посадки на CMS
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+
+    display: block;
+    padding-top: 56.25%; //разрешения сторон видео 16:9 в процентном соотношении
+  }
+
+  iframe,
+  video,
+  object,
+  embed {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  @include breakpointMin($sm) {
+    height: 19rem;
+  }
+
+  @include breakpointMin($md) {
+    height: 32.1875rem;
+  }
+}

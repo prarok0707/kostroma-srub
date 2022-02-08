@@ -1,0 +1,142 @@
+---
+layout: default
+title: Comments
+---
+
+<div class="comments">
+  <div class="comments__crumbs crumbs">
+    <picture class="crumbs__bg image">
+      <!-- <source srcset="assets/images/crumbs/bg.webp" type="image/webp"> -->
+      <img src="assets/images/crumbs/bg.jpg" alt="bg" />
+    </picture>
+
+    <div class="container">
+      <div class="crumbs__body">
+        <ul class="crumbs__list">
+          <li class="crumbs__item">
+            <a class="crumbs__link" href="index.html">Главная</a>
+          </li>
+          <li class="crumbs__item">
+            <a class="crumbs__link" href="#">Отзывы</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="comments__header">
+      <div class="comments__title title_capitalize">
+        <h1 class="title__text">Отзывы</h1>
+      </div>
+
+      <div class="comments__add add-comments">
+        <p class="add-comments__text">Если Вы заказывали строительство дома или бани в компании Кострома сруб и хотите отправить отзыв, пожалуйста, перейдите на on-line форму отправки отзыва.</p>
+        <a class="add-comments__button button icon-arrow" href="#">
+          Написать отзыв
+        </a>
+      </div>
+    </div>
+
+    <div class="comments__body">
+      <div class="comments__list">
+        <article class="comment">
+          <div class="comment__header">
+            <span class="icon-date">07 Сентябрь 2014</span>
+            <span class="icon-user">Вавилов Максим</span>
+            <span class="icon-geo">Московская обл., Сергиево-Посадский р-он</span>
+          </div>
+
+          <div class="comment__body">
+            <h6>Отзыв о строительстве дома из бруса 150х150 мм</h6>
+            <p>Всем добрый день! Буду краток. Проект выбрал почти стандартный (перенесли несколько оконных блоков). Проект переделали и согласовали в срок. Дом из обычного бруса 150х150 площадью 141 метр квадратный на бетонном ленточном фундаменте. Непосредственно строительные работы начали раньше контрактного срока, соответственно, и раньше закончили. Качеством доволен. Заказывал дом по усадку, пока никаких огрехов не увидел. Посмотрим, когда «выстоится».</p>
+
+            <div class="comment__previews">
+              <div class="comment__preview image">
+                <img
+                  data-photo-slider-url="assets/images/project-photos/photo-01.jpg"
+                  data-photo-url="assets/images/project-photos/01.jpg"
+                  alt="Preview"
+                />
+              </div>
+              <div class="comment__preview image">
+                <img
+                  data-photo-slider-url="assets/images/project-photos/photo-02.jpg"
+                  data-photo-url="assets/images/project-photos/02.jpg"
+                  alt="Preview"
+                />
+              </div>
+              <div class="comment__preview image">
+                <img
+                  data-photo-slider-url="assets/images/project-photos/photo-03.jpg"
+                  data-photo-url="assets/images/project-photos/03.jpg"
+                  alt="Preview"
+                />
+              </div>
+              <div class="comment__preview image">
+                <img
+                  data-photo-slider-url="assets/images/project-photos/photo-04.jpg"
+                  data-photo-url="assets/images/project-photos/04.jpg"
+                  alt="Preview"
+                />
+              </div>
+              <div class="comment__preview image">
+                <img
+                  data-photo-slider-url="assets/images/project-photos/photo-05.jpg"
+                  data-photo-url="assets/images/project-photos/05.jpg"
+                  alt="Preview"
+                />
+              </div>
+              <div class="comment__preview image">
+                <img
+                  data-photo-slider-url="assets/images/project-photos/photo-06.jpg"
+                  data-photo-url="assets/images/project-photos/06.jpg"
+                  alt="Preview"
+                />
+              </div>
+          </div>
+        </article>
+        <article class="comment">
+          <div class="comment__header">
+            <span class="icon-date">07 Сентябрь 2014</span>
+            <span class="icon-user">Вавилов Максим</span>
+            <span class="icon-geo">Московская обл., Сергиево-Посадский р-он</span>
+          </div>
+
+          <div class="comment__body">
+            <div class="comment__embed">
+              <iframe width="1904" height="800" src="https://www.youtube.com/embed/RZ6-3BmSBtg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="photo-slider">
+    <div class="photo-slider__body">
+      <div class="photo-slider__button-close">
+        <span></span>
+      </div>
+
+      <div class="photo-slider__swiper swiper">
+        <div class="photo-slider__wrapper swiper-wrapper">
+          <!-- timplate -->
+          <!-- <div class="swiper-slide">
+            <div class="photo-slider__image image">
+              <img
+                data-photo-url="url"
+                alt="Photo"
+              />
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="photo-slider__pagination swiper-pagination"></div>
+
+      <div class="photo-slider-button-prev swiper-button-prev"></div>
+      <div class="photo-slider-button-next swiper-button-next"></div>
+    </div>
+  </div>
+</div>

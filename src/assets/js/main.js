@@ -24,7 +24,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
   projectSlider();
   photoSlider();
 
-  const loaded = new LoadedPhotos({
+  const projectPhotos = new LoadedPhotos({
     selector: '.project-photos__preview',
+  })
+
+  const commitPhoto = new LoadedPhotos({
+    selector: '.comment__preview',
   })
 });
