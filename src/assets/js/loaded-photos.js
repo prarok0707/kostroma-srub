@@ -18,7 +18,7 @@ class LoadedPhotos {
   _setAllItems() {
     let items = document.body.querySelectorAll(this._selector);
 
-    if (!items.length) throw new Error(`Array is empty`);
+    if (!items.length) throw new Error(`Array ${this._selector} is empty`);
 
     this._allItems = items;
 
@@ -77,7 +77,7 @@ class LoadedPhotos {
       this._delay = delay;
       this._setAllItems();
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   }
 }

@@ -8,21 +8,21 @@
       <h2 class="modal__title">Задать вопрос</h2>
       <span class="modal__prompt">Напишите нам и наши менеджеры свяжутся с Вами в ближайшее время</span>
       
-      <form class="modal__form form-modal" action="#">
+      <form class="modal__form form-modal" name="question" action="#">
         <div class="form-modal__control">
-          <input class="form-modal__input" name="user-name" type="text" placeholder="Ваше имя">
+          <input class="form-modal__input" name="user-name" type="text" placeholder="Ваше имя" value="Test message user-name">
           <span class="form-modal__focus-line"></span>
         </div>
         <div class="form-modal__control">
-          <input class="form-modal__input" name="user-phone-number" type="text" placeholder="Ваше телефон">
+          <input class="form-modal__input" name="user-phone-number" type="text" placeholder="Ваше телефон" value="Test message user-phone-number">
           <span class="form-modal__focus-line"></span>
         </div>
         <div class="form-modal__control">
-          <input class="form-modal__input" name="user-email" type="email" placeholder="Ваше E-mail">
+          <input class="form-modal__input" name="user-email" type="email" placeholder="Ваше E-mail" value="testemail@email.test">
           <span class="form-modal__focus-line"></span>
         </div>
         <div class="form-modal__control">
-          <textarea class="form-modal__area" name="user-comment" placeholder="Комментарий"></textarea>
+          <textarea class="form-modal__area" name="user-comment" placeholder="Комментарий">Test message user-comment</textarea>
           <span class="form-modal__focus-line"></span>
         </div>
         
@@ -46,7 +46,7 @@
         </div>
 
         <div class="form-modal__control">
-          <button class="form-modal__button button icon-arrow" type="button">Задать</button>
+          <button class="form-modal__button button icon-arrow" type="submit">Задать</button>
         </div>
       </form>
     </div>
@@ -71,7 +71,7 @@
         </div>
 
         <div class="form-modal__control">
-          <button class="form-modal__button button icon-arrow" type="button">Задать</button>
+          <button class="form-modal__button button icon-arrow" type="submit">Задать</button>
         </div>
       </form>
     </div>

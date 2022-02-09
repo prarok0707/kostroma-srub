@@ -72,12 +72,18 @@
 
   border: 1px solid #d0d0d0;
 
+  transition: background .2s linear;
+
   &:focus + .form__stroce {
     width: 100%;
   }
 
   @include breakpointMin($md) {
     font-size: 1rem;
+  }
+
+  &.input-error {
+    background-color: rgba($color: red, $alpha: 0.3);
   }
 }
 
@@ -92,12 +98,18 @@
 
   resize: vertical;
 
+  transition: background .2s linear;
+
   &:focus + .form__stroce {
     width: 100%;
   }
 
   @include breakpointMin($md) {
     font-size: 1rem;
+  }
+
+  &.input-error {
+    background-color: rgba($color: red, $alpha: 0.3);
   }
 }
 
