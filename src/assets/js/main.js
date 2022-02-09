@@ -10,6 +10,7 @@ import filterReset from "./filter-reset";
 import projectSlider from "./project-slider";
 import photoSlider from './photo-slider'
 import LoadedPhotos from './loaded-photos'
+import PostForm from './post-form'
 
 document.addEventListener("DOMContentLoaded", (e) => {
   showHeaderContacts();
@@ -23,6 +24,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
   filterReset();
   projectSlider();
   photoSlider();
+
+  const postForm = new PostForm()
 
   const projectPhotos = new LoadedPhotos({
     selector: '.project-photos__preview',
